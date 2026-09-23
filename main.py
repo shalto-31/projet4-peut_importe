@@ -493,7 +493,7 @@ def delete_chapter(chapter_id: int):
 
 
 # LISTENERS CRUD
-@app.get("/listeners",response_model=Listener)
+@app.get("/listeners", response_model=list[HidListener])
 def get_listeners():
     return listeners
 
@@ -526,7 +526,7 @@ def delete_listener(listener_id: int):
 
 
 # SUBSCRIPTIONS CRUD
-@app.get("/subscriptions", response_model=Subscription)
+@app.get("/subscriptions", response_model=list[HidSub])
 def get_subscriptions():
     return subscriptions
 
